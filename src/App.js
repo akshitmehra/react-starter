@@ -1,5 +1,11 @@
 import React from 'react';
 
+import './App.scss';
+
 export default function App() {
-  return <p>react-starter</p>;
+  return (
+    <div className="App">
+      <p>react-starter</p>
+    </div>
+  );
 }
