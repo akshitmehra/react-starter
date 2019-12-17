@@ -1,7 +1,14 @@
 const path = require('path');
 
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 module.exports = {
   mode: 'development',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'main.[contentHash].js'
+  },
   module: {
     rules: [
       {
@@ -24,7 +31,13 @@ module.exports = {
     extensions: ['.js']
   },
   devServer: {
-    contentBase: path.join(__dirname, 'public'),
-    publicPath: 'http://localhost:8080/dist/'
-  }
+    contentBase: path.join(__dirname, 'dist')
+  },
+  plugins: [
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: 'public/index.html',
+      inject: false
+    })
+  ]
 };
