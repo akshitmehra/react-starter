@@ -7,6 +7,9 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <title>react-starter</title>
+    <% for(var i=0; i < htmlWebpackPlugin.files.css.length; i++) { %>
+    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css[i] %>" />
+    <% } %>
   </head>
   <body>
     <div id="root"></div>
