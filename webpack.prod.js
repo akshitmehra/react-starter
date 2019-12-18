@@ -10,7 +10,7 @@ const common = require('./webpack.common');
 module.exports = merge(common, {
   mode: 'production',
   output: {
-    filename: '[name].[contentHash].js'
+    filename: 'js/[name].[contentHash].js'
   },
   module: {
     rules: [
@@ -37,7 +37,7 @@ module.exports = merge(common, {
       }
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].[hash].css'
+      filename: 'css/[name].[hash].css'
     })
   ]
 });
