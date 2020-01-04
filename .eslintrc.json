@@ -11,10 +11,12 @@
   },
   "plugins": [
     "react",
+    "prettier",
     "react-hooks"
   ],
   "extends": [
     "eslint:recommended",
+    "plugin:prettier/recommended",
     "plugin:react/recommended"
   ],
   "rules": {
