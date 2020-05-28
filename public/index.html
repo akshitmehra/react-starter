@@ -7,14 +7,14 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <title>react-starter</title>
-    <% for(var i=0; i < htmlWebpackPlugin.files.css.length; i++) { %>
-    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css[i] %>" />
+    <% for (cssFile of htmlWebpackPlugin.files.css) { %>
+    <link rel="stylesheet" href="<%= cssFile %>" />
     <% } %>
   </head>
   <body>
     <div id="root"></div>
-    <% for(var i=0; i < htmlWebpackPlugin.files.js.length; i++) { %>
-    <script src="<%= htmlWebpackPlugin.files.js[i] %>"></script>
+    <% for (jsFile of htmlWebpackPlugin.files.js) { %>
+    <script src="<%= jsFile %>"></script>
     <% } %>
   </body>
 </html>
