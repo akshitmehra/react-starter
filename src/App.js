@@ -1,8 +1,6 @@
-// @flow
-
 import React from 'react';
 
-import './App.scss';
+import './App.css';
 import commute from './commute.png';
 
 export default function App() {
