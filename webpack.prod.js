@@ -27,6 +27,7 @@ module.exports = merge(common, {
       template: 'public/index.html',
       inject: false,
       minify: {
+        collapseBooleanAttributes: true,
         collapseWhitespace: true,
         keepClosingSlash: true,
         removeComments: true

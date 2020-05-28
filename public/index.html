@@ -9,12 +9,11 @@
     <title>react-starter</title>
     <% for (cssFile of htmlWebpackPlugin.files.css) { %>
     <link rel="stylesheet" href="<%= cssFile %>" />
+    <% } %> <% for (jsFile of htmlWebpackPlugin.files.js) { %>
+    <script src="<%= jsFile %>" defer></script>
     <% } %>
   </head>
   <body>
     <div id="root"></div>
-    <% for (jsFile of htmlWebpackPlugin.files.js) { %>
-    <script src="<%= jsFile %>"></script>
-    <% } %>
   </body>
 </html>
