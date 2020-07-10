@@ -4,11 +4,20 @@
     "start": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
   },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
   "browserslist": [
     "> 0.2%",
     "not dead",
     "not op_mini all"
   ],
+  "prettier": {
+    "singleQuote": true
+  },
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
