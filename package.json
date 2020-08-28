@@ -16,7 +16,8 @@
     "not op_mini all"
   ],
   "prettier": {
-    "singleQuote": true
+    "singleQuote": true,
+    "arrowParens": "avoid"
   },
   "dependencies": {
     "react": "^16.13.1",
