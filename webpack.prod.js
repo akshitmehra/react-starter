@@ -17,7 +17,7 @@ module.exports = merge(common, {
       {
         test: /\.css$/,
         include: [path.resolve(__dirname, 'src')],
-        use: [{ loader: MiniCssExtractPlugin.loader }, 'css-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
       }
     ]
   },
